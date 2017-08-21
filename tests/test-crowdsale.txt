@@ -1,0 +1,1794 @@
+Test - payment in state 0 as alice
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                       10000000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    40000000000000000000 wei
+------------------------------------------------------
+EVENT > alice transferred 250000000000000000 wei to ico
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 1
+  owner: pembient
+  contributions:
+    alice, 250000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           250000000000000000 wei
+                    Total:    40000000000000000000 wei
+======================================================
+
+
+Test - payment in state 1 as alice
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+======================================================
+
+
+Test - payment in state 2 as alice
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+======================================================
+
+
+Test - payment in state 3 as alice
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9750000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    39750000000000000000 wei
+======================================================
+
+
+Test - double payment by alice
+======================================================
+  currentState: 0
+  contributorCount: 1
+  owner: pembient
+  contributions:
+    alice, 250000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9500000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           250000000000000000 wei
+                    Total:    39750000000000000000 wei
+------------------------------------------------------
+EVENT > alice transferred 250000000000000000 wei to ico
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 1
+  owner: pembient
+  contributions:
+    alice, 500000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9250000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           500000000000000000 wei
+                    Total:    39750000000000000000 wei
+======================================================
+
+
+Test - payment bob after alice
+======================================================
+  currentState: 0
+  contributorCount: 1
+  owner: pembient
+  contributions:
+    alice, 250000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9000000000000000000 wei
+  bob                         10000000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           250000000000000000 wei
+                    Total:    39250000000000000000 wei
+------------------------------------------------------
+EVENT > bob transferred 150000000000000000 wei to ico
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 250000000000000000 wei
+    bob, 150000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9000000000000000000 wei
+  bob                          9850000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           400000000000000000 wei
+                    Total:    39250000000000000000 wei
+======================================================
+
+
+Test - no payment as mallory
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9000000000000000000 wei
+  bob                          9850000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    38850000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        9000000000000000000 wei
+  bob                          9850000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    38850000000000000000 wei
+======================================================
+
+
+Test - refund in state 0 as alice
+======================================================
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8900000000000000000 wei
+  bob                          9800000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38850000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8900000000000000000 wei
+  bob                          9800000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38850000000000000000 wei
+======================================================
+
+
+Test - refund in state 1 as alice
+======================================================
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8800000000000000000 wei
+  bob                          9750000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38700000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8800000000000000000 wei
+  bob                          9750000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38700000000000000000 wei
+======================================================
+
+
+Test - refund in state 2 as alice
+======================================================
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8700000000000000000 wei
+  bob                          9700000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38550000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8700000000000000000 wei
+  bob                          9700000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38550000000000000000 wei
+======================================================
+
+
+Test - refund in state 3 as alice
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8600000000000000000 wei
+  bob                          9650000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38400000000000000000 wei
+------------------------------------------------------
+EVENT > ico transferred 100000000000000000 wei to alice
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 0 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8700000000000000000 wei
+  bob                          9650000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                            50000000000000000 wei
+                    Total:    38400000000000000000 wei
+======================================================
+
+
+Test - refund bob after alice
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 0 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8700000000000000000 wei
+  bob                          9600000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                            50000000000000000 wei
+                    Total:    38350000000000000000 wei
+------------------------------------------------------
+EVENT > ico transferred 50000000000000000 wei to bob
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 0 wei
+    bob, 0 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8700000000000000000 wei
+  bob                          9650000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                                            0 wei
+                    Total:    38350000000000000000 wei
+======================================================
+
+
+Test - refund requested by non-contributor mallory
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8600000000000000000 wei
+  bob                          9600000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38350000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8600000000000000000 wei
+  bob                          9600000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38350000000000000000 wei
+======================================================
+
+
+Test - refund requested twice by mallory
+======================================================
+  currentState: 3
+  contributorCount: 3
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+    mallory, 0 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8500000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38200000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 3
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+    mallory, 0 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8500000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                     10000000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    38200000000000000000 wei
+======================================================
+
+
+Test - disarmed reentrant attack by mallory
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    reentrant, 10000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8400000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                      9990000000000000000 wei
+  ico                           110000000000000000 wei
+  reentrant                                      0 wei
+                    Total:    38050000000000000000 wei
+------------------------------------------------------
+EVENT > ico transferred 10000000000000000 wei to reentrant
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    reentrant, 0 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8400000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                      9990000000000000000 wei
+  ico                           100000000000000000 wei
+  reentrant                      10000000000000000 wei
+                    Total:    38050000000000000000 wei
+======================================================
+
+
+Test - armed reentrant attack by mallory
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    reentrant, 10000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8300000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           110000000000000000 wei
+  reentrant                                      0 wei
+                    Total:    37940000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    reentrant, 10000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8300000000000000000 wei
+  bob                          9550000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           110000000000000000 wei
+  reentrant                                      0 wei
+                    Total:    37940000000000000000 wei
+======================================================
+
+
+Test - payout in state 0 as pembient
+======================================================
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8200000000000000000 wei
+  bob                          9500000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37830000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8200000000000000000 wei
+  bob                          9500000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37830000000000000000 wei
+======================================================
+
+
+Test - payout in state 1 as pembient
+======================================================
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8100000000000000000 wei
+  bob                          9450000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37680000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8100000000000000000 wei
+  bob                          9450000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37680000000000000000 wei
+======================================================
+
+
+Test - payout in state 2 as pembient
+======================================================
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10000000000000000000 wei
+  alice                        8000000000000000000 wei
+  bob                          9400000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37530000000000000000 wei
+------------------------------------------------------
+EVENT > ico transferred 150000000000000000 wei to pembient
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        8000000000000000000 wei
+  bob                          9400000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    37530000000000000000 wei
+======================================================
+
+
+Test - payout in state 3 as pembient
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7900000000000000000 wei
+  bob                          9350000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37530000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7900000000000000000 wei
+  bob                          9350000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37530000000000000000 wei
+======================================================
+
+
+Test - payout in state 0 as mallory
+======================================================
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7800000000000000000 wei
+  bob                          9300000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37380000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7800000000000000000 wei
+  bob                          9300000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37380000000000000000 wei
+======================================================
+
+
+Test - payout in state 1 as mallory
+======================================================
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7700000000000000000 wei
+  bob                          9250000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37230000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7700000000000000000 wei
+  bob                          9250000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37230000000000000000 wei
+======================================================
+
+
+Test - payout in state 2 as mallory
+======================================================
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7600000000000000000 wei
+  bob                          9200000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37080000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7600000000000000000 wei
+  bob                          9200000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    37080000000000000000 wei
+======================================================
+
+
+Test - payout in state 3 as mallory
+======================================================
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7500000000000000000 wei
+  bob                          9150000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    36930000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10150000000000000000 wei
+  alice                        7500000000000000000 wei
+  bob                          9150000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                           150000000000000000 wei
+                    Total:    36930000000000000000 wei
+======================================================
+
+
+Test - double payout to pembient
+======================================================
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > ico transferred 0 wei to pembient
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 2
+  owner: pembient
+  contributions:
+    alice, 100000000000000000 wei
+    bob, 50000000000000000 wei
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 0} as pembient
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 1} as pembient
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > pembient transitioned ico from state 0 to state 1
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 2} as pembient
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 3} as pembient
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 0} as pembient
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > pembient transitioned ico from state 1 to state 0
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 1} as pembient
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 2} as pembient
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > pembient transitioned ico from state 1 to state 2
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 3} as pembient
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > pembient transitioned ico from state 1 to state 3
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 0} as pembient
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 1} as pembient
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 2} as pembient
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 3} as pembient
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 0} as pembient
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 1} as pembient
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 2} as pembient
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 3} as pembient
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 0} as mallory
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 1} as mallory
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 2} as mallory
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {0, 3} as mallory
+======================================================
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 0
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 0} as mallory
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 1} as mallory
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 2} as mallory
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {1, 3} as mallory
+======================================================
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 1
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 0} as mallory
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 1} as mallory
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 2} as mallory
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {2, 3} as mallory
+======================================================
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 2
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 0} as mallory
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 1} as mallory
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 2} as mallory
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
+Test - state transition {3, 3} as mallory
+======================================================
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+------------------------------------------------------
+EVENT > nothing happened
+------------------------------------------------------
+  currentState: 3
+  contributorCount: 0
+  owner: pembient
+  contributions:
+------------------------------------------------------
+  pembient                    10300000000000000000 wei
+  alice                        7400000000000000000 wei
+  bob                          9100000000000000000 wei
+  mallory                      9980000000000000000 wei
+  ico                                            0 wei
+                    Total:    36780000000000000000 wei
+======================================================
+
+
